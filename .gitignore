@@ -3,4 +3,5 @@
 ################################################################################
 
 /.vs
-/TrainingsManager.Backend/TrainingsManager.Backend.EntityFramework/obj
+/obj
+/bin

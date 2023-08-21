@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrainingsManager.Backend.EntityFramework\TrainingsManager.Backend.EntityFramework.csproj" />
+    <ProjectReference Include="..\TrainingsManager.Backend.Model\TrainingsManager.Backend.Model.csproj" />
+  </ItemGroup>
+
+</Project>
