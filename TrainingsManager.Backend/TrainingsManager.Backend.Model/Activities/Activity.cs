@@ -12,7 +12,6 @@ namespace TrainingsManager.Backend.Model.Activities
         public Activity(Guid userId, int distance, DateTime date, int heartFrequancyBPM, TimeSpan time, TimeSpan pace, int calories)
         {
             this.UserId = userId;
-            this.Distance = distance;
             this.Date = date;
             this.HeartFrequencyBPM = heartFrequancyBPM;
             this.Time = time;
@@ -27,7 +26,9 @@ namespace TrainingsManager.Backend.Model.Activities
         public TimeSpan Pace { get; private set; }
         public int Calories { get; private set; }
 
-        public abstract int CalculateCalories(int weight, int height);
+        public ICollection<Running> Runnings { get; private set; }
+        public ICollection<Cycling> Cyclings { get; private set; }
+        public ICollection<Squatting> Squattings { get; private set; }
 
     }
 }
