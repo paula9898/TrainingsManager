@@ -1,4 +1,6 @@
-﻿namespace TrainingsManager.Backend.Model
+﻿using System.Diagnostics;
+
+namespace TrainingsManager.Backend.Model
 {
     public class User
     {
@@ -21,5 +23,7 @@
         public int Height { get; private set; }
         public int Weight { get; private set; }
         public int Age { get; private set; }
+
+        public ICollection<Activity> Activities { get; private set; }
     }
 }
