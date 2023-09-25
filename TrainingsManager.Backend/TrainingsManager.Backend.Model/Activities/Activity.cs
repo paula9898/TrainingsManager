@@ -7,34 +7,31 @@ using TrainingsManager.Backend.Model.Base;
 
 namespace TrainingsManager.Backend.Model.Activities
 {
-    public abstract class Activity
+    public class Activity : Entity
     {
-        private Activity()
+        public Activity(Guid userId, DateTime date, int heartFrequencyBPM, TimeSpan time, int calories)
         {
-
-        }
-        public Activity(Guid userId, DateTime date, int heartFrequancyBPM, TimeSpan time, int calories)
-        {
-            this.Id = Guid.NewGuid();
             this.UserId = userId;
             this.Date = date;
-            this.HeartFrequencyBPM = heartFrequancyBPM;
+            this.HeartFrequencyBPM = heartFrequencyBPM;
             this.Time = time;
             this.Calories = calories;
             
         }
-        public Guid Id { get; private set; }
         public Guid UserId { get; private set; }
         public DateTime Date { get; private set; }
         public int HeartFrequencyBPM { get; private set; }
         public TimeSpan Time { get; private set; }
         public int Calories { get; private set; }
         public User User { get; private set; }
-        public abstract int CalculateCalories(int weight, int height);
+        public virtual int CalculateCalories(int weight, int height)
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICollection<Running> Runnings { get; private set; }
-        public ICollection<Cycling> Cyclings { get; private set; }
-        public ICollection<Squatting> Squattings { get; private set; }
+        public Running Running { get; private set; }
+        public Cycling Cycling { get; private set; }
+        public Squatting Squatting { get; private set; }
 
     }
 }

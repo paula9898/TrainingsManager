@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using TrainingsManager.Backend.Model.Activities;
 
 namespace TrainingsManager.Backend.Model
 {
@@ -24,6 +24,6 @@ namespace TrainingsManager.Backend.Model
         public int Weight { get; private set; }
         public int Age { get; private set; }
 
-        public ICollection<Activity>Activities { get; private set; }
+        public ICollection<Activity>Activities{ get; private set; }
     }
 }

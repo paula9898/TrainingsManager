@@ -18,9 +18,9 @@ namespace TrainingsManager.Backend.Application.ActivityService
             _dbContext = dbContext;
         }
 
-        public async Task<Guid> CreateRunningActivity(Guid userId,Guid activityId, int distance, DateTime date, int heartFrequancyBPM, TimeSpan time, TimeSpan pace, int calories)
+        public async Task<Guid> CreateRunningActivity(Guid userId, int distance, DateTime date, int heartFrequencyBPM, TimeSpan time, TimeSpan pace, int calories)
         {
-            var runningActivity = new Running(userId, activityId, distance, date, heartFrequancyBPM, time,pace, calories);
+            var runningActivity = new Running(userId, distance, date, heartFrequencyBPM, time,pace, calories);
 
             _dbContext.Set<Running>().Add(runningActivity);
             await _dbContext.SaveChangesAsync();
@@ -29,9 +29,9 @@ namespace TrainingsManager.Backend.Application.ActivityService
             //hej biblioteko zaapiekuj się tym taskiem, watkami, ile rdzeni jest na komputerze, biblioteka wie ile mam rdzeni
         }
 
-        public async Task<Guid> CreateCyclingActivity(Guid userId, Guid activityId, int distance, DateTime date, int heartFrequancyBPM, TimeSpan time, TimeSpan pace, int calories)
+        public async Task<Guid> CreateCyclingActivity(Guid userId, int distance, DateTime date, int heartFrequencyBPM, TimeSpan time, TimeSpan pace, int calories)
         {
-            var cyclingActivity = new Cycling(userId, activityId, distance, date, heartFrequancyBPM, time, pace, calories);
+            var cyclingActivity = new Cycling(userId, distance, date, heartFrequencyBPM, time, pace, calories);
 
             _dbContext.Set<Cycling>().Add(cyclingActivity);
             await _dbContext.SaveChangesAsync();

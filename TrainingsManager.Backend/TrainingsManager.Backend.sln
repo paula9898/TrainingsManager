@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingsManager.Backend.WebAPI", "TrainingsManager.Backend.WebAPI\TrainingsManager.Backend.WebAPI.csproj", "{75221543-DB75-4A35-8B59-663B68E8F60D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingsManager.Backend.WebAPI", "TrainingsManager.Backend.WebAPI\TrainingsManager.Backend.WebAPI.csproj", "{75221543-DB75-4A35-8B59-663B68E8F60D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingsManager.Backend.Model", "TrainingsManager.Backend.Model\TrainingsManager.Backend.Model.csproj", "{5929C45D-C289-4419-9E05-130C49AF73C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingsManager.Backend.Model", "TrainingsManager.Backend.Model\TrainingsManager.Backend.Model.csproj", "{5929C45D-C289-4419-9E05-130C49AF73C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingsManager.Backend.Application", "TrainingsManager.Backend.Application\TrainingsManager.Backend.Application.csproj", "{331D34C2-0156-4B3A-902A-B4C72090A00D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingsManager.Backend.Application", "TrainingsManager.Backend.Application\TrainingsManager.Backend.Application.csproj", "{331D34C2-0156-4B3A-902A-B4C72090A00D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingsManager.Backend.EntityFramework", "TrainingsManager.Backend.EntityFramework\TrainingsManager.Backend.EntityFramework.csproj", "{A7DA0856-2E25-4374-8C11-457FBB2EFA0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingsManager.Backend.EntityFramework", "TrainingsManager.Backend.EntityFramework\TrainingsManager.Backend.EntityFramework.csproj", "{A7DA0856-2E25-4374-8C11-457FBB2EFA0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
