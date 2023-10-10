@@ -24,15 +24,29 @@ namespace TrainingsManager.Backend.EntityFramework.Data
             modelBuilder.Entity<Activity>()
                 .HasOne(x => x.User)
                 .WithMany(x => x.Activities);
+
+
             modelBuilder.Entity<Activity>()
                .HasOne(x => x.Running)
-               .WithOne(x => x.Activity);
+               .WithOne(x => x.Activity)
+               .HasForeignKey<Running>(x => x.Id);
+
             modelBuilder.Entity<Activity>()
              .HasOne(x => x.Cycling)
-             .WithOne(x => x.Activity);
+             .WithOne(x => x.Activity)
+             .HasForeignKey<Cycling>(x => x.Id);
+
             modelBuilder.Entity<Activity>()
              .HasOne(x => x.Squatting)
-             .WithOne(x => x.Activity);
+             .WithOne(x => x.Activity)
+             .HasForeignKey<Squatting>(x => x.Id);
+
+            modelBuilder.Entity<Cycling>()
+                .ToTable("Cyclings");
+            modelBuilder.Entity<Running>()
+               .ToTable("Runnings");
+            modelBuilder.Entity<Squatting>()
+               .ToTable("Squattings");
         }
     }
 }

@@ -32,6 +32,5 @@ namespace TrainingsManager.Backend.Model.Activities
         public Running Running { get; private set; }
         public Cycling Cycling { get; private set; }
         public Squatting Squatting { get; private set; }
-
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TrainingsManager.Backend.EntityFramework.Data;
 
@@ -11,9 +12,11 @@ using TrainingsManager.Backend.EntityFramework.Data;
 namespace TrainingsManager.Backend.EntityFramework.Migrations
 {
     [DbContext(typeof(TrainingsManagerDbContext))]
-    partial class TrainingsManagerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230926140212_MigrationFive")]
+    partial class MigrationFive
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
