@@ -10,7 +10,6 @@ namespace TrainingsManager.Backend.EntityFramework.Data
         {
 
         }
-
         public DbSet<User> Users { get; set; }
         public DbSet<Activity> Activities { get; set; }///zeby entity framework wiedzial jakie tabele mam i recordy
         public DbSet<Cycling> Cyclings { get; set; }
