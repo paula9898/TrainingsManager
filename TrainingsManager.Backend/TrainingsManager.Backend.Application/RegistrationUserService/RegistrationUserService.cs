@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TrainingsManager.Backend.Application.UnitTests.HashingPasswordService;
+using TrainingsManager.Backend.Application.HashingPasswordService;
 using TrainingsManager.Backend.EntityFramework.Data;
 using TrainingsManager.Backend.Model;
 using TrainingsManager.Backend.Model.Activities;
@@ -32,7 +32,7 @@ namespace TrainingsManager.Backend.Application
                 throw new ArgumentException("Password and confirm password does not match");
             }
 
-            HashingPasswordService hashingPasswordService = new HashingPasswordService();
+            HashPasswordService hashingPasswordService = new HashPasswordService();
 
             var hashpassword = hashingPasswordService.GenerateHash(password);
 

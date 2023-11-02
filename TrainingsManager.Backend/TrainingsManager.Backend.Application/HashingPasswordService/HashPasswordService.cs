@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace TrainingsManager.Backend.Application.UnitTests.HashingPasswordService
+namespace TrainingsManager.Backend.Application.HashingPasswordService
 {
-    public class  HashingPasswordService
+    public class HashPasswordService
     {
         public bool VerifyPassword(string password, string hash)
         {

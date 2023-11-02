@@ -8,7 +8,7 @@ namespace TrainingsManager.Backend.Application.UnitTests
         public void GenerateHash_Return_CorrectHash()
         {
             // Arrange
-            var hashingPasswordService = new HashingPasswordService.HashingPasswordService();
+            var hashingPasswordService = new HashingPasswordService.HashPasswordService();
 
             // Act
             var hashPassword = hashingPasswordService.GenerateHash(Password);
