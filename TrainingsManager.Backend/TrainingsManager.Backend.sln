@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingsManager.Backend.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingsManager.Backend.EntityFramework", "TrainingsManager.Backend.EntityFramework\TrainingsManager.Backend.EntityFramework.csproj", "{A7DA0856-2E25-4374-8C11-457FBB2EFA0B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F286DCE1-F3D0-4615-9F2E-F3A62441D5B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingsManager.Backend.Application.UnitTests", "TrainingsManager.Backend.Application.UnitTests\TrainingsManager.Backend.Application.UnitTests.csproj", "{E02CE78B-036D-4F5E-B76F-111DF68A393A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{A7DA0856-2E25-4374-8C11-457FBB2EFA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7DA0856-2E25-4374-8C11-457FBB2EFA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7DA0856-2E25-4374-8C11-457FBB2EFA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02CE78B-036D-4F5E-B76F-111DF68A393A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02CE78B-036D-4F5E-B76F-111DF68A393A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02CE78B-036D-4F5E-B76F-111DF68A393A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02CE78B-036D-4F5E-B76F-111DF68A393A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E02CE78B-036D-4F5E-B76F-111DF68A393A} = {F286DCE1-F3D0-4615-9F2E-F3A62441D5B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D162D89-0AE4-4BA7-BC3A-1860E4F5AD08}
