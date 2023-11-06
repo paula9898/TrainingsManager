@@ -34,18 +34,14 @@ namespace TrainingsManager.Backend.Application
 
             HashPasswordService hashingPasswordService = new HashPasswordService();
 
-            var hashpassword = hashingPasswordService.GenerateHash(password);
+            var passwordHash = hashingPasswordService.GenerateHash(password);
 
-            if(hashingPasswordService.VerifyPassword(password, hashpassword))
+            _trainingsManagerDbContext.Users.Add(new User(name, surname, city, sex, height, weight, age, email, passwordHash)
             {
-                _trainingsManagerDbContext.Users.Add(new User(name, surname, city, sex, height, weight, age, email,hashpassword)
-                {
 
-                });
+            });
 
-                _trainingsManagerDbContext.SaveChanges();
-            }
+            _trainingsManagerDbContext.SaveChanges();
         }
-
     }
 }

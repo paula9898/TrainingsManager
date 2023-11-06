@@ -18,5 +18,19 @@ namespace TrainingsManager.Backend.Application.UnitTests
             Assert.NotEmpty(hashPassword);
             Assert.True(hashPassword.Length == 88);
         }
+
+        [Fact]
+        public void VerifyPassword_Return_True()
+        {
+            // Arrange
+            var hashingPasswordService = new HashingPasswordService.HashPasswordService();
+
+            // Act
+            var isVerified = hashingPasswordService.VerifyPassword(Password, hashingPasswordService.GenerateHash(Password));
+
+            // Assert
+
+            Assert.True(isVerified);
+        }
     }
 }
