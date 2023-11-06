@@ -32,5 +32,20 @@ namespace TrainingsManager.Backend.Application.UnitTests
 
             Assert.True(isVerified);
         }
+
+        [Fact]
+        public void DoubleGenerateHash_Return_CorrectHash()
+        {
+            // Arrange
+            var hashingPasswordService = new HashingPasswordService.HashPasswordService();
+
+            // Act
+            var expectedHashpassword = hashingPasswordService.GenerateHash(Password);
+            var actualHashpassword = hashingPasswordService.GenerateHash(Password);
+
+            // Assert
+            Assert.Equal(expectedHashpassword,actualHashpassword);
+            
+        }
     }
 }
