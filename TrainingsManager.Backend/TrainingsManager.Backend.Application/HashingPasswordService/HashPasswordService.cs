@@ -8,7 +8,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TrainingsManager.Backend.Application.HashingPasswordService
 {
-    public class HashPasswordService
+    public class HashPasswordService : IHashPasswordService
     {
         public bool VerifyPassword(string password, string hash)
         {

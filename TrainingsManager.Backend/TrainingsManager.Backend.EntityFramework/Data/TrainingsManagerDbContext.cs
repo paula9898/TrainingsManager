@@ -4,13 +4,12 @@ using TrainingsManager.Backend.Model.Activities;
 
 namespace TrainingsManager.Backend.EntityFramework.Data
 {
-    public class TrainingsManagerDbContext : DbContext
+    public class TrainingsManagerDbContext : DbContext, ITrainingsManagerDbContext
     {
         public TrainingsManagerDbContext(DbContextOptions options) : base(options)
         {
 
         }
-
         public DbSet<User> Users { get; set; }
         public DbSet<Activity> Activities { get; set; }///zeby entity framework wiedzial jakie tabele mam i recordy
         public DbSet<Cycling> Cyclings { get; set; }

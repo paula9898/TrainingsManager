@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TrainingsManager.Backend.Application.HashingPasswordService;
+using TrainingsManager.Backend.Application.RegistrationUsersService;
 using TrainingsManager.Backend.EntityFramework.Data;
 using TrainingsManager.Backend.Model;
 using TrainingsManager.Backend.Model.Activities;
@@ -12,11 +13,13 @@ using TrainingsManager.Backend.Model.Activities;
 
 namespace TrainingsManager.Backend.Application
 {
-    public class RegistrationUserService 
+    public class RegistrationUserService : IRegistrationUserService
     {
-        private readonly TrainingsManagerDbContext _trainingsManagerDbContext;
-        public RegistrationUserService(TrainingsManagerDbContext trainingsManagerDbContext)
+        private readonly IHashPasswordService _hashPasswordService;
+        private readonly ITrainingsManagerDbContext _trainingsManagerDbContext;
+        public RegistrationUserService(IHashPasswordService hashPasswordService, ITrainingsManagerDbContext trainingsManagerDbContext) 
         {
+            _hashPasswordService = hashPasswordService;
             _trainingsManagerDbContext = trainingsManagerDbContext;
         }
 
@@ -32,16 +35,15 @@ namespace TrainingsManager.Backend.Application
                 throw new ArgumentException("Password and confirm password does not match");
             }
 
-            HashPasswordService hashingPasswordService = new HashPasswordService();
+            //HashPasswordService hashingPasswordService = new HashPasswordService();
 
-            var passwordHash = hashingPasswordService.GenerateHash(password);
+            //using (ITrainingsManagerDbContext trainingsManagerDbContext = new ITrainingsManagerDbContext(null))
+            //{
+                var passwordHash = _hashPasswordService.GenerateHash(password);
 
-            _trainingsManagerDbContext.Users.Add(new User(name, surname, city, sex, height, weight, age, email, passwordHash)
-            {
+                _trainingsManagerDbContext.Users.Add(new User(name, surname, city, sex, height, weight, age, email, passwordHash));
 
-            });
-
-            _trainingsManagerDbContext.SaveChanges();
+                _trainingsManagerDbContext.SaveChanges();//moze byc blad ale Dispose i tak sie wywola
         }
     }
 }

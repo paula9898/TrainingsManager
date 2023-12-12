@@ -34,18 +34,31 @@ namespace TrainingsManager.Backend.Application.UnitTests
         }
 
         [Fact]
-        public void DoubleGenerateHash_Return_CorrectHash()
+        public void VerifyPassword_Return_False()
         {
             // Arrange
             var hashingPasswordService = new HashingPasswordService.HashPasswordService();
 
             // Act
-            var expectedHashpassword = hashingPasswordService.GenerateHash(Password);
-            var actualHashpassword = hashingPasswordService.GenerateHash(Password);
+            var isVerified = hashingPasswordService.VerifyPassword(Password, hashingPasswordService.GenerateHash("Paulinka1234!"));
 
             // Assert
-            Assert.Equal(expectedHashpassword,actualHashpassword);
-            
+
+            Assert.False(isVerified);
+        }
+
+        [Fact]
+        public void GenerateHash_WhenHashedGeneratedTwice_ShouldReturnTrue()
+        {
+            // Arrange
+            var hashingPasswordService = new HashingPasswordService.HashPasswordService();
+
+            // Act
+            var expected = hashingPasswordService.GenerateHash(Password);
+            var actual = hashingPasswordService.GenerateHash(Password);
+
+            // Assert
+            Assert.Equal(expected,actual);
         }
     }
 }
