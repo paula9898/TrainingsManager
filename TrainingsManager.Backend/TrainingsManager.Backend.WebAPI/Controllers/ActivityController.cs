@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TrainingsManager.Backend.Application.ActivityService;
-using TrainingsManager.Backend.EntityFramework.Data;
-using TrainingsManager.Backend.Model.Activities;
-using TrainingsManager.Backend.WebAPI.Dtos;
 
 namespace TrainingsManager.Backend.WebAPI.Controllers
 {
@@ -11,5 +7,12 @@ namespace TrainingsManager.Backend.WebAPI.Controllers
     [ApiController]
     public class ActivityController : ControllerBase
     {
+        private readonly ITrainingsManagerDbContext _trainingsManagerDbContext;
+
+        public ActivityController(ITrainingsManagerDbContext trainingsManagerDbContext)
+        {
+            _trainingsManagerDbContext = trainingsManagerDbContext;
+        }
+
     }
 }
