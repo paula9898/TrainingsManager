@@ -11,19 +11,5 @@ namespace TrainingsManager.Backend.WebAPI.Controllers
     [ApiController]
     public class ActivityController : ControllerBase
     {
-        private readonly TrainingsManagerDbContext _trainingsManagerDbContext;
-
-        public ActivityController(TrainingsManagerDbContext trainingsManagerDbContext)
-        {
-            _trainingsManagerDbContext = trainingsManagerDbContext;
-        }
-        //POST: 
-        [HttpPost]
-
-        public async Task PostRunning(RunningDto running)
-        {
-            ActivityService activityService = new ActivityService();
-        }
-
     }
 }
