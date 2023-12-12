@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace TrainingsManager.Backend.WebAPI.Controllers
 {
@@ -7,5 +6,13 @@ namespace TrainingsManager.Backend.WebAPI.Controllers
     [ApiController]
     public class ActivityController : ControllerBase
     {
+        private readonly ITrainingsManagerDbContext _trainingsManagerDbContext;
+
+        public ActivityController(ITrainingsManagerDbContext trainingsManagerDbContext)
+        {
+            _trainingsManagerDbContext = trainingsManagerDbContext;
+        }
+
     }
 }
+>>>>>>> Stashed changes
