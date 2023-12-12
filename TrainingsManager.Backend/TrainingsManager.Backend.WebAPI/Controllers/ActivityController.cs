@@ -34,4 +34,4 @@ namespace TrainingsManager.Backend.WebAPI.Controllers
 
     }
 }
->>>>>>> Stashed changes
+
