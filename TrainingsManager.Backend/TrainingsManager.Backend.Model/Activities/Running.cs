@@ -6,7 +6,6 @@
         {
             this.Distance = distance;
             this.Pace = pace;
-            
         }
         public Activity Activity { get; private set; }
         public TimeSpan Pace { get; private set; }
